@@ -1,0 +1,45 @@
+[project]
+name = "titanoboa-cli"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "PatrickAlphac", email = "54278053+PatrickAlphaC@users.noreply.github.com" },
+]
+dependencies = ["tomli-w>=1.0.0", "eth-account>=0.13.1"]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[project.scripts]
+"boa" = "titanoboa_cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "titanoboa-cli>=0.1",
+    "pytest>=8.3.2",
+    "mypy>=1.11.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["titanoboa_cli"]
+
+[tool.rye.scripts]
+typecheck = "mypy ."
+
+[tool.mypy]
+disable_error_code = 'type-arg, attr-defined'
+ignore_missing_imports = true
+exclude = [
+    'tests/',            # Excludes all files in the tests directory
+    '(^|/)test_.*\.py$', # Excludes files that start with test_
+]
+
+[tool.pytest.ini_options]
+addopts = "--ignore=tests/data/"
