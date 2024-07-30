@@ -1,1 +1,2 @@
-[networks.pyevm]
+[networks.zksync]
+url = "http://hi"

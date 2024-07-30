@@ -1,4 +1,3 @@
-
 # SPDX-License-Identifier: MIT
 # @version 0.4.0
 
