@@ -6,5 +6,9 @@ dist/
 wheels/
 *.egg-info
 
+# IDE files
+.idea/
+.vscode/
+
 # venv
 .venv

@@ -10,7 +10,7 @@ dependencies = [
     "titanoboa>=0.2.1",
     "python-dotenv>=1.0.1",
     "tomli-w>=1.0.0",
-    "titanoboa-zksync @ git+https://github.com/PatrickAlphaC/titanoboa-zksync/",
+    "titanoboa-zksync>=0.2.2",
     "uv>=0.1.39",  # contains https://github.com/astral-sh/uv/pull/3257
 ]
 readme = "README.md"
